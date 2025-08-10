@@ -160,3 +160,123 @@
     free -h                       # Human-readable format
     ```
 
+## 6. Network Commands
+- `ping` - Test Network Connectivity
+    ```
+    ping google.com               # Test connectivity to google.com
+    ping -c 4 google.com          # Send only 4 packets
+    ```
+
+- `wget` and `curl` - Download Files
+    ```
+    wget https://example.com/file.zip     # Download file
+    curl -O https://example.com/file.zip  # Download file with curl
+    curl https://api.example.com          # Make HTTP request
+    ```
+
+## 7. Archive and Compression
+- `tar` - Archive Files
+    - Create and extract archive files.
+    ```
+    tar -czf archive.tar.gz directory/    # Create compressed archive
+    tar -xzf archive.tar.gz               # Extract compressed archive
+    tar -tzf archive.tar.gz               # List contents of archive
+    ```
+
+- `zip` and `unzip` - ZIP Archives
+    ```
+    zip -r archive.zip directory/         # Create ZIP archive
+    unzip archive.zip                     # Extract ZIP archive
+    unzip -l archive.zip                  # List contents of ZIP
+    ```
+
+## 8. Text Processing
+- `sort` - Sort Lines
+    ```
+    sort file.txt                 # Sort lines alphabetically
+    sort -n numbers.txt           # Sort numerically
+    sort -r file.txt              # Reverse sort
+    ```
+
+- `wc` - Word Count
+    ```
+    wc file.txt                   # Show lines, words, and characters
+    wc -l file.txt                # Count lines only
+    wc -w file.txt                # Count words only
+    ```
+
+- `cut` - Extract Columns
+    ```
+    cut -d',' -f1,3 data.csv      # Extract columns 1 and 3 from CSV
+    cut -c1-10 file.txt           # Extract first 10 characters of each line
+    ```
+
+## 9. Process Management
+- `kill` - Terminate Processes
+    ```
+    kill PID                      # Terminate process by ID
+    kill -9 PID                   # Force kill process
+    killall process_name          # Kill all processes with name
+    ```
+
+- `jobs` - Show Background Jobs
+    ```
+    jobs                          # Show running background jobs
+    fg %1                         # Bring job 1 to foreground
+    bg %1                         # Send job 1 to background
+    ```
+
+# 10. I/O Redirection and Pipes
+- Redirection
+    ```
+    command > file.txt            # Redirect output to file (overwrite)
+    command >> file.txt           # Redirect output to file (append)
+    command < file.txt            # Use file as input
+    command 2> error.log          # Redirect error messages to file
+    ```
+
+- Pipes
+    ```
+    cat file.txt | grep "search"          # Pipe output to grep
+    ls -la | sort | head -10               # Chain multiple commands
+    ps aux | grep firefox | wc -l         # Count Firefox processes
+    ```
+
+## 11. Environment and Variables
+- `echo` - Display Text
+    ```
+    echo "Hello World"            # Display text
+    echo $HOME                    # Display environment variable
+    echo $USER                    # Display current username
+    ```
+
+- `export` - Set Environment Variables
+    ```
+    export MYVAR="value"          # Set environment variable
+    export PATH=$PATH:/new/path   # Add to PATH variable
+    ```
+
+- `env` - Show Environment Variables
+    ```
+    env                           # Show all environment variables
+    env | grep PATH               # Show PATH variable
+    ```
+
+## 12. Getting Help
+- `man` - Manual Pages
+    ```
+    man ls                        # Show manual for ls command
+    man -k keyword                # Search manual pages by keyword
+    ```
+
+- `--help` Option
+    ```
+    ls --help                     # Show help for ls command
+    grep --help                   # Show help for grep command
+    ```
+
+- `which` and `whereis` - Locate Commands
+    ```
+    which python3                 # Show path to python3 executable
+    whereis ls                    # Show paths to ls binary and manual
+    ```
