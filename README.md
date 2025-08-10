@@ -28,6 +28,7 @@
 ## 2. File and Directory Operations
 - `mkdir` - Make Directory
     - Create new directories
+    ```
     mkdir new_folder              # Create single directory
     mkdir -p path/to/new/folder   # Create nested directories
     mkdir folder1 folder2         # Create multiple directories
@@ -98,5 +99,64 @@
     grep -r "search_term" directory/      # Recursive search in directory
     grep -n "search_term" file.txt        # Show line numbers
     grep -v "search_term" file.txt        # Show lines NOT containing term
+    ```
+
+## 4. File Permissions and Ownership
+- `chmod` - Change File Permissions
+    - Modify file and directory permissions.
+    ```
+    chmod 755 script.sh           # rwxr-xr-x (owner: read/write/execute, others: read/execute)
+    chmod +x script.sh            # Add execute permission
+    chmod -w file.txt             # Remove write permission
+    chmod u+x,g-w,o-r file.txt    # User add execute, group remove  write, other remove read
+    ```
+
+- `chown` - Change Ownership
+    - Change file and directory ownership (usually requires sudo).
+    ```
+    sudo chown username file.txt          # Change owner
+    sudo chown username:groupname file.txt # Change owner and group
+    sudo chown -R username directory/      # Change ownership recursively
+    ```
+
+## 5. System Information Commands
+- `ps` - Show Running Processes
+    - Display information about running processes.
+    ```
+    ps                            # Show processes for current user
+    ps aux                        # Show all processes with detailed info
+    ps -ef                        # Show all processes in full format
+    ```
+
+- `top` and `htop` - System Monitor
+    - Display real-time system information.
+    ```
+    top                           # Basic system monitor (q to quit)
+    htop                          # Enhanced system monitor (if installed)
+    ```
+
+- `df` - Disk Space Usage
+    - Show disk space usage.
+    ```
+    du                            # Show disk usage for current directory
+    du -h                         # Human-readable format
+    du -sh *                      # Summary of each item in current directory
+    du -sh directory/             # Show total size of specific directory
+    ```
+
+- `du` - Directory Space Usage
+    - Show directory space usage.
+    ```
+    du                            # Show disk usage for current directory
+    du -h                         # Human-readable format
+    du -sh *                      # Summary of each item in current directory
+    du -sh directory/             # Show total size of specific directory
+    ```
+
+- `free` - Memory Usage
+    - Show memory usage information.
+    ```
+    free                          # Show memory usage
+    free -h                       # Human-readable format
     ```
 
